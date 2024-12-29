@@ -23,6 +23,7 @@ public class Cinema {
     @JoinColumn(name = "cityID")
     private City city;
 
+    
 	public Cinema(Integer cinemaID, String name, Integer totalCinemaHalls, City city) 
 	{
 		
