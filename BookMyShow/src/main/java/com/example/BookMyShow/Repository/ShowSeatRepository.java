@@ -12,5 +12,9 @@ import com.example.BookMyShow.Domain.ShowSeat;
 public interface ShowSeatRepository extends JpaRepository<ShowSeat, Long> {
 	
 	List<ShowSeat> findByShow(Show show);
-	List<ShowSeat> findByShowSeatIDIn(List<Integer> showSeatIDs);}
+	List<ShowSeat> findByShowSeatIDIn(List<Integer> showSeatIDs);
+	
+	void deleteByShow(Show show);
+	
+}
 
