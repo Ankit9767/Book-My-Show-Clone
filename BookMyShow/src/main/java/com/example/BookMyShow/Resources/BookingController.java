@@ -37,5 +37,19 @@ public class BookingController {
         bookingService.deleteBooking(id);
         return ResponseEntity.noContent().build();
     }
+    
+    @GetMapping("/user/{userID}")
+    public ResponseEntity<List<Booking>> getBookingsByUserID(@PathVariable Long userID) {
+        List<Booking> userBookings = bookingService.getBookingsByUserID(userID);
+        return ResponseEntity.ok(userBookings);
+    }
+    
+    @GetMapping("/{bookingID}")
+    public ResponseEntity<Booking> getBookingById(@PathVariable Long bookingID) {
+        Booking booking = bookingService.getBookingById(bookingID);
+        return ResponseEntity.ok(booking);
+    }
+
+
 }
 
