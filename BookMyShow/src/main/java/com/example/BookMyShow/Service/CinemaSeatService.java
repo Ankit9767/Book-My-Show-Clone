@@ -25,5 +25,10 @@ public class CinemaSeatService {
     public void deleteCinemaSeat(Long id) {
         cinemaSeatRepository.deleteById(id);
     }
+    
+    public List<CinemaSeat> getCinemaSeatsByCinemaHallID(Integer cinemaHallID) {
+        return cinemaSeatRepository.findByCinemaHall_CinemaHallID(cinemaHallID);
+    }
+    
 }
 
