@@ -91,5 +91,16 @@ public class BookingService {
         bookingRepository.deleteById(id);
     }
     
+    public List<Booking> getBookingsByUserID(Long userID) {
+        return bookingRepository.findByUserId(userID);
+    }
+    
+    public Booking getBookingById(Long bookingID) {
+        return bookingRepository.findById(bookingID)
+            .orElseThrow(() -> new RuntimeException("Booking not found with ID: " + bookingID));
+    }
+
+
+    
 }
 
