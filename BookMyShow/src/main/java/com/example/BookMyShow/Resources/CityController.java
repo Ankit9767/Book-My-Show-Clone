@@ -1,8 +1,11 @@
 package com.example.BookMyShow.Resources;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,5 +30,12 @@ public class CityController {
         City addedCity = cityService.addCity(city);
         return new ResponseEntity<>(addedCity, HttpStatus.CREATED);
     }
+    
+    @GetMapping("/all")
+    public ResponseEntity<List<City>> getAllCities() {
+        List<City> cities = cityService.getAllCities();
+        return new ResponseEntity<>(cities, HttpStatus.OK);
+    }
+
 }
 
