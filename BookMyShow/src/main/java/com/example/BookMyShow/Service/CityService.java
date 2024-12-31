@@ -1,5 +1,7 @@
 package com.example.BookMyShow.Service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +21,10 @@ public class CityService {
     public City addCity(City city) {
         return cityRepository.save(city);
     }
+    
+    public List<City> getAllCities() {
+        return cityRepository.findAll();
+    }
+
 }
 
