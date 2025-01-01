@@ -1,0 +1,55 @@
+
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px; 
+}
+
+.app-header {
+  font-size: 3em;
+  font-weight: bold;
+  color: #333; 
+  margin-bottom: 20px; 
+}
+
+
+.button-container {
+  display: flex;
+  gap: 20px; 
+  margin-left: 10px;
+}
+
+.btn {
+  padding: 10px 10px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+/* Blue button specific styling */
+.blue-btn {
+  background-color: #007bff; 
+  color: white;
+}
+
+.blue-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    font-size: 2em;
+  }
+
+  .btn {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+}
