@@ -1,0 +1,101 @@
+.movies-container {
+  padding: 20px;
+  background-color: #f8f9fa; 
+  min-height: 100vh; 
+  overflow-y: auto; 
+  animation: fadeIn 1s ease-out; 
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  gap: 20px; 
+  margin-top: 20px;
+  animation: gridAnimation 1s ease-out; 
+}
+
+@keyframes gridAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.movie-card {
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 350px; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: cardAnimation 1s ease-out;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 0 5px transparent, 
+    0 0 15px 5px rgba(255, 0, 0, 1), 
+    0 0 15px 5px rgba(0, 0, 0, 1);
+}
+
+@keyframes cardAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.movie-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-add-movie {
+  margin-top: 20px;
+  margin-left: 1000px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-add-movie:hover {
+  background-color: darkred;
+  transform: scale(1.1);
+}
