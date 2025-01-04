@@ -1,0 +1,96 @@
+.cinemaHalls-container {
+  padding: 30px;
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+  overflow-y: auto;
+  animation: fadeIn 1s ease-out; 
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cinemaHalls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  gap: 20px;
+  margin-top: 30px;
+  animation: gridAnimation 1s ease-out; 
+}
+
+@keyframes gridAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cinemaHall-card {
+  cursor: pointer;
+  margin-top: 50px;
+  position: relative; 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 300px; 
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  padding: 15px;
+  color: white; 
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  animation: cardAnimation 1s ease-out; 
+}
+
+.cinemaHall-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 0 5px transparent, 
+    0 0 15px 5px rgba(255, 0, 0, 1), 
+    0 0 15px 5px rgba(0, 0, 0, 1); 
+}
+
+@keyframes cardAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cinemaHall-card h3 {
+  margin: 0;
+  font-size: 1.8rem; 
+  font-weight: bold;
+}
+
+.cinemaHall-card p {
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .cinemaHall-card {
+    height: 250px; 
+  }
+}
+
+.cinemaHall-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
