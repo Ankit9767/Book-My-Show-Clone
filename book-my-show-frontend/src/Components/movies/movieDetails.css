@@ -1,0 +1,92 @@
+.movie-details-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.movie-details-inner {
+    display: flex;
+    gap: 20px; 
+    width: 100%; 
+    max-width: 1200px; 
+    justify-content: center; 
+}
+
+.movie-image-card {
+    width: 50%; 
+    height: 400px; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.movie-details-card {
+    width: 50%;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-details-card h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+
+.movie-details-card p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.movie-details-card p strong {
+    font-weight: bold;
+}
+
+.avilable-shows-movie-details-back-button-container {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    width: 100%;
+    margin-top: 50px;
+}
+
+.avilable-shows-button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto; 
+}
+
+.avilable-shows-button:hover {
+    background-color: darkred;
+}
+
+.movie-details-back-button {
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+}
+
+.movie-details-back-button:hover {
+    background-color: rgb(43, 99, 228);
+}
+
