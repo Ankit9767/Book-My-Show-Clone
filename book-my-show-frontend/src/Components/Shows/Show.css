@@ -1,0 +1,98 @@
+.show-card {
+  cursor: pointer;
+  color: black;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; 
+  animation: fadeInCard 0.5s ease-out;
+}
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.show-card + .show-card {
+  border-top: 2px solid #ddd; 
+}
+
+.show-card:last-child {
+  border-bottom: none; 
+}
+
+.show-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 0 5px transparent, 
+    0 0 15px 5px rgba(255, 0, 0, 1), 
+    0 0 15px 5px rgba(0, 0, 0, 1); 
+}
+
+.book-button {
+  position: absolute;
+  bottom: 30px; 
+  right: 60px; 
+  padding: 10px 20px;
+  background-color: #e91515;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeInButton 0.7s ease-out; 
+}
+
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.book-button:hover {
+  background-color: #cb3434; 
+  transform: translateY(-3px);
+}
+
+.back-button {
+  padding: 10px 20px;
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 20px;
+}
+
+.back-button:hover {
+  background-color: rgb(25, 97, 197); 
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .show-card {
+    margin-left: 0; 
+  }
+
+  .book-button, .back-button {
+    font-size: 0.9em; 
+    padding: 8px 16px;
+  }
+}
