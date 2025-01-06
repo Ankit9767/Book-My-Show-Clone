@@ -1,0 +1,168 @@
+
+.booking-form-container {
+  color: black;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+.cancel-button {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.theater-screen {
+  width: 90%;
+  margin-left: 60px;
+  margin-bottom: 20px;
+  height: 40px;
+  background-color: #7a6f6f; 
+  outline: black;
+  color: white; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px; 
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); 
+  animation: fadeIn 1s ease-in-out;
+}
+
+.seat-selection {
+  margin-right: 20px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 10px;
+  justify-items: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.seat-button {
+  margin-bottom: 2px;
+  width: 60px;
+  height: 40px;
+  background-color: #dcdcdc;
+  border-radius: 20%;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+.seat-button.selected {
+  background-color: #17ab1c; 
+  color: white;
+}
+
+.seat-button.booked {
+  background-color: #ff5722;
+  cursor: not-allowed;
+}
+
+.seat-button:hover {
+  background-color: #a5a5a5;
+}
+
+.seat-button:disabled {
+  cursor: not-allowed;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input[type="number"] {
+  background-color: #f9f9f9;
+  color: black;
+  width: 100px; 
+  height: 40px; 
+  padding: 10px; 
+  font-size: 16px;
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  margin-left: 10px; 
+  animation: fadeIn 1s ease-in-out;
+}
+
+.confirm-cancel-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+.confirm-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px; 
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cancel-button {
+  margin-left: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px; 
+  animation: fadeIn 1s ease-in-out; 
+}
+
+.confirm-button:hover {
+  background-color: #0056b3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+  .booking-form-container label{
+    color: black;
+  }
+  
