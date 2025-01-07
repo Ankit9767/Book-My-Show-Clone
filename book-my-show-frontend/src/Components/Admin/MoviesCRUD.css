@@ -1,0 +1,126 @@
+
+.movies-crud-container {
+    color: black;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    margin: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  h3 {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .add-movie-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .add-movie-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .add-movie-form-label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .add-movie-form-input,
+  .add-movie-form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .add-movie-form-textarea {
+    resize: vertical;
+    height: 60px;
+  }
+  
+  .add-movie-btn-submit {
+    background-color: #319ae5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;
+    margin-left: 250px; 
+  }
+  
+  .add-movie-btn-submit:hover {
+    background-color: #5eaacd;
+  }
+  
+  .movies-list {
+    margin-top: 30px;
+  }
+  
+  .movie-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .movie-item h4 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .movie-item p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .movie-actions {
+    margin-top: 10px;
+  }
+  
+  .movie-actions button {
+    background-color: #266db9;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .movie-actions button:hover {
+    background-color: #53aee0;
+  }
+  .movie-actions button:last-child {
+    background-color: #dc3545;
+  }
+  
+  .movie-actions button:focus {
+    outline: none;
+  }
+  
+  .error-message {
+    color: #f44336;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
