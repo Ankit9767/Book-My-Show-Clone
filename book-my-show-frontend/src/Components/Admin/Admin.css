@@ -1,0 +1,32 @@
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .admin-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    margin-top: 20px;
+  }
+  
+  .admin-btn {
+    background: linear-gradient(100deg, red, rgb(177, 40, 40));
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .admin-btn:hover {
+    background: linear-gradient(200deg, red, black);
+    color: #ff8c00;
+  }
+  
