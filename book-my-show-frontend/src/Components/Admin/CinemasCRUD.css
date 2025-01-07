@@ -1,0 +1,164 @@
+.cinemas-crud-container {
+  color: black;
+  padding: 20px;
+  background-color: #f0f4f8;
+  font-family: Arial, sans-serif;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; 
+  appearance: textfield; 
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.add-cinema-section,
+.edit-cinema-section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.add-cinema-section h3,
+.edit-cinema-section h3 {
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.add-cinema-section input,
+.edit-cinema-section input
+{
+  display: block;
+  height: 40px;
+  margin-left: 1px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+.add-cinema-section select,
+.edit-cinema-section select {
+    display: block;
+    height: 40px;
+    margin-right: 20px;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.add-cinema-section input:focus,
+.edit-cinema-section input:focus,
+.add-cinema-section select:focus,
+.edit-cinema-section select:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.add-cinema-section button {
+  width: 50%;
+  margin-top: 10px;
+  margin-left: 120px;
+  padding: 12px 0;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-cinema-section button{
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 120px;
+    padding: 12px 0;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-cinema-section button:hover,
+.edit-cinema-section button:hover {
+  background-color: #0056b3;
+}
+
+
+.edit-cinema-section .cancel-button {
+  background-color: #dc3545;
+  margin-top: 10px;
+}
+
+.edit-cinema-section .cancel-button:hover {
+  background-color: #a71d2a;
+}
+
+.cinemas-list {
+  margin-top: 30px;
+}
+
+.cinema-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.cinema-actions button {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: medium;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cinema-actions button:hover {
+  background-color: #0056b3;
+}
+
+.cinema-actions button:last-child {
+  background-color: #dc3545;
+}
+
+.cinema-actions button:last-child:hover {
+  background-color: #a71d2a;
+}
