@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import './BookingForm.css';
 
 const BookingForm = () => {
@@ -92,8 +93,20 @@ const BookingForm = () => {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => {
-        alert('Booking successful!');
-        navigate('/dashboard/bookings'); 
+        Swal.fire({
+          title: 'Booking Successful!',
+          text: 'Your seats have been booked.',
+          icon: 'success',
+          confirmButtonText: 'Close',
+          showClass: {
+            popup: 'animate__animated animate__fadeInDown',
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp',
+          },
+        }).then(() => {
+          navigate('/dashboard/bookings');
+        });
       })
       .catch((error) => {
         console.error('Error creating booking:', error);
@@ -121,8 +134,6 @@ const BookingForm = () => {
     }
   };
   
-  
-
   const handleCancel = () => {
     navigate(-1);
   };
