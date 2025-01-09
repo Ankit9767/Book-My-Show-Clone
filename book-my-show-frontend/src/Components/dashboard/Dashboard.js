@@ -1,16 +1,16 @@
 import { useNavigate, Outlet } from 'react-router-dom';
+import { FaFilm, FaTheaterMasks, FaCalendarAlt, FaUserCircle, FaCogs } from 'react-icons/fa';
 import './Dashboard.css';
 
 const Dashboard = () => {
   const navigate = useNavigate();
-
   const userRole = localStorage.getItem('role');
 
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('role');
     navigate('/basepage');
-  }
+  };
 
   return (
     <div className="dashboard-container">
@@ -25,30 +25,31 @@ const Dashboard = () => {
         <aside className="sidebar">
           <div className="sidebar-buttons">
             <button onClick={() => navigate('/dashboard/movies')} className="sidebar-btn">
-              Movies
+              <FaFilm className="sidebar-icon" /> Movies
             </button>
 
             <button onClick={() => navigate('/dashboard/cinema')} className="sidebar-btn">
-              Cinemas
+              <FaTheaterMasks className="sidebar-icon" /> Cinemas
             </button>
 
             <button onClick={() => navigate('/dashboard/bookings')} className="sidebar-btn">
-              Bookings
-            </button>
-            <button onClick={() => navigate('/dashboard/profile')} className="sidebar-btn">
-              Profile
+              <FaCalendarAlt className="sidebar-icon" /> Bookings
             </button>
 
-          {userRole === 'ADMIN' && (
+            <button onClick={() => navigate('/dashboard/profile')} className="sidebar-btn">
+              <FaUserCircle className="sidebar-icon" /> Profile
+            </button>
+
+            {userRole === 'ADMIN' && (
               <button onClick={() => navigate('/dashboard/admin')} className="sidebar-btn">
-                Admin
+                <FaCogs className="sidebar-icon" /> Admin
               </button>
             )}
           </div>
         </aside>
 
         <main className="main-block">
-          <Outlet /> 
+          <Outlet />
         </main>
       </div>
     </div>
