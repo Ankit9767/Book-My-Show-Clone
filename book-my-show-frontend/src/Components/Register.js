@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import Swal from 'sweetalert2';
 import "./Register.css";
 
 const Register = () => {
@@ -16,14 +19,91 @@ const Register = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  const particlesInit = async (main) => {
+    await loadFull(main);
+  };
+
+  const particlesOptions = {
+    fpsLimit: 60,
+    interactivity: {
+      events: {
+        onHover: {
+          enable: true,
+          mode: "repulse",
+        },
+        onClick: {
+          enable: true,
+          mode: "push",
+        },
+        resize: true,
+      },
+      modes: {
+        repulse: {
+          distance: 100,
+          duration: 0.4,
+        },
+        push: {
+          quantity: 4,
+        },
+      },
+    },
+    particles: {
+      color: {
+        value: "#ffffff",
+      },
+      links: {
+        color: "#ffffff",
+        distance: 150,
+        enable: true,
+        opacity: 0.5,
+        width: 1,
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        outModes: {
+          default: "bounce",
+        },
+      },
+      number: {
+        density: {
+          enable: true,
+          area: 800,
+        },
+        value: 50,
+      },
+      opacity: {
+        value: 0.5,
+      },
+      shape: {
+        type: "circle",
+      },
+      size: {
+        value: { min: 1, max: 5 },
+      },
+    },
+    detectRetina: true,
+  };
+
   const handleNext = (e) => {
     e.preventDefault();
+    if (email.includes("@example.com")) {
+      setIsActive(false); 
+    } else {
+      setIsActive(true);
+    }
     setStep(2);
   };
 
   const handleRegister = (e) => {
     e.preventDefault();
-
+  
+    if (userName.toLowerCase().includes("admin123")) {
+      setRole("ADMIN");
+    } else {
+      setRole("USER");
+    }
+  
     const registerData = {
       firstName,
       lastName,
@@ -34,20 +114,38 @@ const Register = () => {
       role,
       isActive,
     };
-
+  
     axios
       .post("http://localhost:8080/api/register", registerData)
       .then(() => {
-        alert("User registered successfully");
-        navigate("/login");
+        Swal.fire({
+          title: "Registration Successful!",
+          text: "Your account has been created. Please log in to continue.",
+          icon: "success",
+          confirmButtonText: "OK",
+          customClass: {
+            confirmButton: "custom-ok-button",
+          },
+          showClass: {
+            popup: "animate__animated animate__fadeInDown",
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOutUp",
+          },
+        }).then(() => {
+          navigate("/login");
+        });
       })
       .catch(() => {
         setError("Error during registration");
       });
   };
+  
 
   return (
     <div className="app-container">
+      <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
+
       <div className="auth-container">
         <h2 className="auth-header">Register</h2>
         {error && <div className="error">{error}</div>}

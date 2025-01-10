@@ -166,3 +166,18 @@ html {
     color: black;
   }
   
+
+  .custom-ok-button {
+    background-color: #e12121; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .custom-ok-button:hover {
+    background-color: #de6262;
+  }
+  
