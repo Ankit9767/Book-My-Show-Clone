@@ -98,6 +98,9 @@ const BookingForm = () => {
           text: 'Your seats have been booked.',
           icon: 'success',
           confirmButtonText: 'Close',
+          customClass: {
+            confirmButton: "custom-ok-button",
+          },
           showClass: {
             popup: 'animate__animated animate__fadeInDown',
           },

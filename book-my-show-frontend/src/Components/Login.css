@@ -155,3 +155,10 @@ input:focus {
     transform: translateY(0);
   }
 }
+
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 import "./Login.css";
 
 const Login = () => {
@@ -8,6 +10,72 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+
+  const particlesInit = async (main) => {
+    await loadFull(main);
+  };
+
+  const particlesOptions = {
+    fpsLimit: 60,
+    interactivity: {
+      events: {
+        onHover: {
+          enable: true,
+          mode: "repulse",
+        },
+        onClick: {
+          enable: true,
+          mode: "push",
+        },
+        resize: true,
+      },
+      modes: {
+        repulse: {
+          distance: 100,
+          duration: 0.4,
+        },
+        push: {
+          quantity: 4,
+        },
+      },
+    },
+    particles: {
+      color: {
+        value: "#ffffff",
+      },
+      links: {
+        color: "#ffffff",
+        distance: 150,
+        enable: true,
+        opacity: 0.5,
+        width: 1,
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        outModes: {
+          default: "bounce",
+        },
+      },
+      number: {
+        density: {
+          enable: true,
+          area: 800,
+        },
+        value: 50,
+      },
+      opacity: {
+        value: 0.5,
+      },
+      shape: {
+        type: "circle",
+      },
+      size: {
+        value: { min: 1, max: 5 },
+      },
+    },
+    detectRetina: true,
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -56,6 +124,8 @@ const Login = () => {
 
   return (
     <div className="app-container">
+      <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
+
       <div className="auth-container">
         <h2 className="auth-header">Login</h2>
         {error && <div className="error">{error}</div>}
