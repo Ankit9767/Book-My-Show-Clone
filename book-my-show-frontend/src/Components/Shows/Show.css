@@ -1,4 +1,5 @@
 .show-card {
+  margin-top: 50px;
   cursor: pointer;
   color: black;
   padding: 20px;
@@ -70,6 +71,7 @@
 }
 
 .back-button {
+  margin-top: 70px;
   padding: 10px 20px;
   background-color: grey;
   color: white;
